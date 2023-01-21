@@ -1,0 +1,22 @@
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts_list {
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+li {
+    display: flex;
+    
+}
+div {
+    margin: 0;
+}
+p {
+    margin: 0;
+    padding: 0px;
+}

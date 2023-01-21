@@ -1,0 +1,28 @@
+.contacts_item {margin-left: 10px;
+    padding-left: 10px;
+    height: 25px;
+    width: 350px;
+    border: 1px solid rgb(224, 224, 198);
+    border-radius: 4px;
+    background-color:beige;
+    display: flex;
+    align-items: center;
+}
+
+.contacts_user {
+    display: flex;
+    
+    width: 350px;
+}
+.contacts_name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.button_delete {
+    color:rgb(255, 255, 255);
+    background-color: rgb(20, 18, 15);
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin-right: 5px;
+}

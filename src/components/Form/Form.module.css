@@ -1,0 +1,32 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+h3 {
+    margin: 3px;
+}
+
+input {
+    margin-bottom: 10px;
+    height: 25px;
+
+}
+.add_button {
+    color:rgb(255, 255, 255);
+    background-color: rgb(20, 18, 15);
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 100px;
+    height: 25px;
+    margin-bottom: 5px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-left: 35px;
+}
+button:hover {
+    background-color:orange;
+    border-color: transparent;
+}
