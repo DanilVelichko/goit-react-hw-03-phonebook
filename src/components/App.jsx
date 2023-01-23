@@ -18,7 +18,7 @@ export class App extends React.Component {
       alert(data.name + ' is already in contacts.');
     } else {
       this.setState(prev => ({ contacts: [...prev.contacts, data] }));
-         }
+    }
   };
 
   handleDataUpdate = input => {
@@ -46,11 +46,11 @@ export class App extends React.Component {
   };
 
   saveToLocalStorageContact() {
-   localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
   }
 
   getFromLocalStorageContact() {
-       const getLocalStorageContacts = JSON.parse(
+    const getLocalStorageContacts = JSON.parse(
       localStorage.getItem('contacts')
     );
     if (getLocalStorageContacts !== null) {
@@ -59,13 +59,12 @@ export class App extends React.Component {
   }
 
   componentDidMount() {
- this.getFromLocalStorageContact()
+    this.getFromLocalStorageContact();
   }
 
   componentDidUpdate() {
-this.saveToLocalStorageContact()
+    this.saveToLocalStorageContact();
   }
-
 
   render() {
     return (
