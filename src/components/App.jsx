@@ -37,13 +37,12 @@ export class App extends React.Component {
     }
   }
 
-  onDeleteBtn =  onDeleteBtn => {
+  onDeleteBtn = onDeleteBtn => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(
         contact => contact.id !== onDeleteBtn
       ),
     }));
-
   };
 
   saveToLocalStorageContact() {
@@ -63,10 +62,11 @@ export class App extends React.Component {
     this.getFromLocalStorageContact();
   }
 
-  componentDidUpdate() {
-    this.saveToLocalStorageContact();
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      this.saveToLocalStorageContact();
+    }
   }
-
 
   render() {
     return (
