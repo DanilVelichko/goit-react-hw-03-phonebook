@@ -9,7 +9,7 @@ export class App extends React.Component {
     filter: '',
   };
 
-  formSubmitHandler = async data => {
+  formSubmitHandler = data => {
     const matchNameInput = this.state.contacts.find(
       contact => contact.name.toLowerCase() === data.name.toLowerCase()
     );
@@ -17,8 +17,7 @@ export class App extends React.Component {
     if (matchNameInput) {
       alert(data.name + ' is already in contacts.');
     } else {
-     await this.setState(prev => ({ contacts: [...prev.contacts, data] }));
-      this.saveToLocalStorageContact();
+      this.setState(prev => ({ contacts: [...prev.contacts, data] }));
     }
   };
 
@@ -38,14 +37,13 @@ export class App extends React.Component {
     }
   }
 
-  onDeleteBtn = async onDeleteBtn => {
-   await this.setState(prevState => ({
+  onDeleteBtn =  onDeleteBtn => {
+    this.setState(prevState => ({
       contacts: prevState.contacts.filter(
         contact => contact.id !== onDeleteBtn
       ),
     }));
 
-    this.saveToLocalStorageContact();
   };
 
   saveToLocalStorageContact() {
@@ -63,6 +61,10 @@ export class App extends React.Component {
 
   componentDidMount() {
     this.getFromLocalStorageContact();
+  }
+
+  componentDidUpdate() {
+    this.saveToLocalStorageContact();
   }
 
 
